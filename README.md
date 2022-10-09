@@ -8,8 +8,8 @@ This repository is open to all members of the GitHub community. Any member may c
 
 https://github.com/Faraz1243/OpenSourse-Static-Web-Templates
 
-# Hacktoberfest
-What is Hacktoberfest? Hacktoberfest is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. Developers get involved by completing pull requests, participating in events, and donating to open source projects.
+# What is Hacktoberfest?
+Hacktoberfest is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. Developers get involved by completing pull requests, participating in events, and donating to open source projects.
 
 https://hacktoberfest.digitalocean.com/
 
