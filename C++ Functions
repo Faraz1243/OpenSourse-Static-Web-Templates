@@ -26,5 +26,13 @@
       result = result * i;
     }
     return result;
-    
+  }
+  int power(int num, int p)
+  {
+    int ans=1;
+    for(int i=0, i<p, i++)
+    {
+      ans*=num;
+    }
+    return ans;
   }
