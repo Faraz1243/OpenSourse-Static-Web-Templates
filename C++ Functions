@@ -1,3 +1,4 @@
+
 // *********** Welcome To OctoberFest
 
 int addFunction(int a , int b)
@@ -8,3 +9,8 @@ int subtractFunction(int a, int b)
 {
   return a - b;
 }
+=======
+//.............Wellcome to Hactober Fest 202...............
+//
+//         this file conatins simple C++ functions 
+
