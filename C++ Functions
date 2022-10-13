@@ -1,0 +1,10 @@
+// *********** Welcome To OctoberFest
+
+int addFunction(int a , int b)
+{
+    return a + b;
+}
+int subtractFunction(int a, int b)
+{
+  return a - b;
+}
