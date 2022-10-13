@@ -1,3 +1,20 @@
 //.............Wellcome to Hactober Fest 202...............
 //
 //         this file conatins simple C++ functions 
+
+  int addFunction(int a, int b)
+  {
+    return a+b;
+  }
+  int subtractFunction(int a, int b)
+  {
+    return a-b;
+  }
+  int divisionFunction(int a , int b)
+  {
+    return a/b;
+  }
+  int multiplyFunction(int a , int b)
+  {
+    return a*b;
+  }
