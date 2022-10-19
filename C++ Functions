@@ -41,3 +41,26 @@
     {return a;}
     return b;
     }
+    
+    
+    //InOrderTraversal
+    
+     void inOrderTraversal()
+    {
+        TreeNode *temp = root;
+        while (!s1.empty() || temp != nullptr)
+        {
+            if(temp!=NULL)
+            {
+                s1.push(temp);
+                temp = temp->left;
+            }
+            else
+            {
+                temp = s1.top();
+                s1.pop();
+                cout << temp->val<< endl;
+                temp = temp->right;
+            }
+        }
+    }
