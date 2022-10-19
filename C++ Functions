@@ -36,6 +36,54 @@
     }
     return ans;
   }
+
+  int max(int a,int b){
+    if(a>b)
+    {return a;}
+    return b;
+    }
+    
+    
+    //InOrderTraversal
+    
+     void inOrderTraversal()
+    {
+        TreeNode *temp = root;
+        while (!s1.empty() || temp != nullptr)
+        {
+            if(temp!=NULL)
+            {
+                s1.push(temp);
+                temp = temp->left;
+            }
+            else
+            {
+                temp = s1.top();
+                s1.pop();
+                cout << temp->val<< endl;
+                temp = temp->right;
+            }
+        }
+    }
+    
+    void insert(Node *&root, int data)
+{
+    if (root == NULL)
+    {
+        root = create(data);
+    }
+
+    else if (root->data > data)
+    {
+        insert(root->left, data);
+    }
+
+    else
+    {
+        insert(root->right, data);
+    }
+}
+
   void postOrderDisplay(Node *root)
 {
     if (root != NULL)
