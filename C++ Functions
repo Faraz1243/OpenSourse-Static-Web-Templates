@@ -36,3 +36,14 @@
     }
     return ans;
   }
+  void postOrderDisplay(Node *root)
+{
+    if (root != NULL)
+    {
+        
+        postOrderDisplay(root->left);
+        postOrderDisplay(root->right);
+        cout << root->data << " ";
+       
+    }
+}
