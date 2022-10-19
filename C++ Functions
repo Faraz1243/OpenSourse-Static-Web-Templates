@@ -36,3 +36,9 @@
     }
     return ans;
   }
+  
+  int maxvaluevector(){
+    const int array[] = {1,45,6,143,76,435,75,99,24};
+    std::cout << *std::max_element(mybegin(array), myend(array)) << '\n';
+    
+  }
