@@ -2,6 +2,20 @@
 //
 //         this file conatins simple C++ functions 
 
+//Creation of node-----
+  struct Node {
+      char ch;
+      struct Node *left, *right;
+  };
+  Node* createNewNode(char ch)
+  {
+      Node *temp = new Node;
+      temp->value = ch;
+      temp->left = temp->right = NULL;
+      return temp;
+  }
+//-----------end here
+
   int addFunction(int a, int b)
   {
     return a+b;
@@ -37,65 +51,15 @@
     return ans;
   }
 
-  int max(int a,int b){
-    if(a>b)
-    {return a;}
-    return b;
-    }
-    
-    
-    //InOrderTraversal
-    
-     void inOrderTraversal()
-    {
-        TreeNode *temp = root;
-        while (!s1.empty() || temp != nullptr)
-        {
-            if(temp!=NULL)
-            {
-                s1.push(temp);
-                temp = temp->left;
-            }
-            else
-            {
-                temp = s1.top();
-                s1.pop();
-                cout << temp->val<< endl;
-                temp = temp->right;
-            }
-        }
-    }
-    
-    void insert(Node *&root, int data)
-{
-    if (root == NULL)
-    {
-        root = create(data);
-    }
+  void postOrder(struct Node *node)
+  {
+    if (node == NULL)
+        return;
 
-    else if (root->data > data)
-    {
-        insert(root->left, data);
-    }
+    //Postorder: Left->Right->Root
+    postOrder(node->left);
+    postOrder(node->right);
+    cout << node->value << " ";
+  }
 
-    else
-    {
-        insert(root->right, data);
-    }
-}
 
-  void postOrderDisplay(Node *root)
-{
-    if (root != NULL)
-    {
-        
-        postOrderDisplay(root->left);
-        postOrderDisplay(root->right);
-        cout << root->data << " ";
-       
-    }
-}
-int mod(int a, int b)
-{
-  return a%b;
-}
