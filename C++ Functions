@@ -36,6 +36,7 @@
     }
     return ans;
   }
+
   int max(int a,int b){
     if(a>b)
     {return a;}
@@ -82,4 +83,15 @@
         insert(root->right, data);
     }
 }
-    
+
+  void postOrderDisplay(Node *root)
+{
+    if (root != NULL)
+    {
+        
+        postOrderDisplay(root->left);
+        postOrderDisplay(root->right);
+        cout << root->data << " ";
+       
+    }
+}
