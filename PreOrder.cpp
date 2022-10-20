@@ -8,7 +8,9 @@ struct Node {
 } *root;
 
 void preOrder(struct Node *root) {
-    cout << root -> data << " ";
-    preOrder(root -> left);
-    preOrder(root -> right);
+    if(root != NULL) {
+        cout << root -> data << " ";
+        preOrder(root -> left);
+        preOrder(root -> right);
+    }
 }
