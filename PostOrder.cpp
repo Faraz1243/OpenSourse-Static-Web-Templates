@@ -8,7 +8,9 @@ struct Node {
 } *root;
 
 void postOrder(struct Node *root) {
-    postOrder(root -> left);
-    postOrder(root -> right);
-    cout << root -> data << " ";
+    if(root != NULL) {
+        postOrder(root -> left);
+        postOrder(root -> right);
+        cout << root -> data << " ";
+    }
 }
