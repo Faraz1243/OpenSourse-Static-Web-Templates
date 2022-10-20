@@ -36,3 +36,69 @@
     }
     return ans;
   }
+  // traversal
+  #include <iostream>
+#include <list>
+using namespace std;
+
+struct Node
+{
+    int key;
+    Node *left, *right;
+
+    Node(int key)
+    {
+        this->key = key;
+        this->left = this->right = nullptr;
+    }
+};
+
+void levelOrderTraversal(Node *root)
+{
+
+    if (root == nullptr)
+    {
+        return;
+    }
+
+    list<Node *> queue;
+    queue.push_back(root);
+
+    Node *curr = nullptr;
+
+    while (queue.size())
+    {
+
+        curr = queue.front();
+        queue.pop_front();
+
+        cout << curr->key << " ";
+
+        if (curr->left)
+        {
+            queue.push_back(curr->left);
+        }
+
+        if (curr->right)
+        {
+            queue.push_back(curr->right);
+        }
+    }
+}
+
+int main()
+{
+    Node *root = new Node(7);
+    root->left = new Node(10);
+    root->right = new Node(9);
+    root->left->left = new Node(14);
+    root->left->right = new Node(12);
+    root->right->left = new Node(16);
+    root->right->right = new Node(29);
+
+    levelOrderTraversal(root);
+
+    return 0;
+}
+
+
