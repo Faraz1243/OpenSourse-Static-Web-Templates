@@ -99,3 +99,9 @@ int mod(int a, int b)
 {
   return a%b;
 }
+
+int sqrt(int a)
+{
+   return sqrt(25);
+}
+
