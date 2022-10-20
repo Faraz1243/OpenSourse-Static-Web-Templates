@@ -102,6 +102,7 @@ int mod(int a, int b)
 
 int sqrt(int a)
 {
-   return sqrt(25);
+  a=25;
+   return sqrt(a);
 }
 
