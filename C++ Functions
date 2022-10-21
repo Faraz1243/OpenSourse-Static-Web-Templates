@@ -36,6 +36,50 @@
     }
     return ans;
   }
+struct Node
+{
+    int key;
+    Node *left, *right;
+
+    Node(int key)
+    {
+        this->key = key;
+        this->left = this->right = nullptr;
+    }
+};
+
+void levelOrderTraversal(Node *root)
+{
+
+    if (root == nullptr)
+    {
+        return;
+    }
+
+    list<Node *> queue;
+    queue.push_back(root);
+
+    Node *curr = nullptr;
+
+    while (queue.size())
+    {
+
+        curr = queue.front();
+        queue.pop_front();
+
+        cout << curr->key << " ";
+
+        if (curr->left)
+        {
+            queue.push_back(curr->left);
+        }
+
+        if (curr->right)
+        {
+            queue.push_back(curr->right);
+        }
+    }
+}
 
   int max(int a,int b){
     if(a>b)
@@ -95,6 +139,7 @@
        
     }
 }
+
 int mod(int a, int b)
 {
   return a%b;
@@ -105,4 +150,5 @@ int sqrt(int a)
   a=25;
    return sqrt(a);
 }
+
 
