@@ -171,13 +171,6 @@ string infixConversion(string postfix)
   }
   return infix.top();
 }
-int main()
-{
-  string postfix = "xyae+/%";
-  cout << "The infix conversion of the postfix expression '" << postfix << "' is : ";
-  cout << infixConversion(postfix);
-  return 0;
-}
 
 int sqrt(int a)
 {
@@ -189,5 +182,12 @@ void postOrder(struct Node *root) {
         postOrder(root -> left);
         postOrder(root -> right);
         cout << root -> data << " ";
+    }
+}
+void preOrder(struct Node *root) {
+    if(root != NULL) {
+        cout << root -> data << " ";
+        preOrder(root -> left);
+        preOrder(root -> right);
     }
 }
