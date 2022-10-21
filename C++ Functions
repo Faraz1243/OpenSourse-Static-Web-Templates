@@ -184,4 +184,10 @@ int sqrt(int a)
   a=25;
    return sqrt(a);
 }
-
+void postOrder(struct Node *root) {
+    if(root != NULL) {
+        postOrder(root -> left);
+        postOrder(root -> right);
+        cout << root -> data << " ";
+    }
+}
