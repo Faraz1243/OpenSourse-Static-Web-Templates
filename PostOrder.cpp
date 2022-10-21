@@ -1,11 +1,8 @@
-#include <iostream>
-using namespace std;
-
 struct Node {
     int data;
     struct Node *left;
     struct Node *right;
-} *root;
+}
 
 void postOrder(struct Node *root) {
     if(root != NULL) {
@@ -14,3 +11,4 @@ void postOrder(struct Node *root) {
         cout << root -> data << " ";
     }
 }
+//This file is meaant to be deleted
