@@ -36,11 +36,6 @@
     }
     return ans;
   }
-  // traversal
-  #include <iostream>
-#include <list>
-using namespace std;
-
 struct Node
 {
     int key;
@@ -86,19 +81,74 @@ void levelOrderTraversal(Node *root)
     }
 }
 
-int main()
+  int max(int a,int b){
+    if(a>b)
+    {return a;}
+    return b;
+    }
+    
+    
+    //InOrderTraversal
+    
+     void inOrderTraversal()
+    {
+        TreeNode *temp = root;
+        while (!s1.empty() || temp != nullptr)
+        {
+            if(temp!=NULL)
+            {
+                s1.push(temp);
+                temp = temp->left;
+            }
+            else
+            {
+                temp = s1.top();
+                s1.pop();
+                cout << temp->val<< endl;
+                temp = temp->right;
+            }
+        }
+    }
+    
+    void insert(Node *&root, int data)
 {
-    Node *root = new Node(7);
-    root->left = new Node(10);
-    root->right = new Node(9);
-    root->left->left = new Node(14);
-    root->left->right = new Node(12);
-    root->right->left = new Node(16);
-    root->right->right = new Node(29);
+    if (root == NULL)
+    {
+        root = create(data);
+    }
 
-    levelOrderTraversal(root);
+    else if (root->data > data)
+    {
+        insert(root->left, data);
+    }
 
-    return 0;
+    else
+    {
+        insert(root->right, data);
+    }
+}
+
+  void postOrderDisplay(Node *root)
+{
+    if (root != NULL)
+    {
+        
+        postOrderDisplay(root->left);
+        postOrderDisplay(root->right);
+        cout << root->data << " ";
+       
+    }
+}
+
+int mod(int a, int b)
+{
+  return a%b;
+}
+
+int sqrt(int a)
+{
+  a=25;
+   return sqrt(a);
 }
 
 
