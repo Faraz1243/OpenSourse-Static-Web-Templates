@@ -1,7 +1,8 @@
 //.............Wellcome to Hactober Fest 202...............
 //
 //         this file conatins simple C++ functions 
-
+#include<iostream>
+#include<conio.h>
   int addFunction(int a, int b)
   {
     return a+b;
@@ -190,4 +191,10 @@ void preOrder(struct Node *root) {
         preOrder(root -> left);
         preOrder(root -> right);
     }
+}
+void popup(string s)
+{
+  cout<<s<<endl;
+  cout<<"Press Any Key to Continue!";
+  getch();
 }
