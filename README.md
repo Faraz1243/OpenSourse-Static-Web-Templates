@@ -82,3 +82,20 @@ Unfortunately you will have to submit at least 5 PRs in order to get a T-shirt.
 * [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)
 * [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 * [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
+
+* ## Project Structure
+
+- `/profiles` → Contains contributor profile pages  
+- `/CONTRIBUTORS.md` → List of contributors  
+- Static HTML/CSS templates for practice  
+
+## How to Contribute (Beginner Friendly)
+
+1. Fork the repository  
+2. Clone your fork  
+3. Create a new branch  
+4. Make small changes (profile page, fix typo, improve UI)  
+5. Commit and push  
+6. Create a Pull Request  
+
+Keep your PR simple and focused.
