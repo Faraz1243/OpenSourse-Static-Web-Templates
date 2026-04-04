@@ -95,10 +95,17 @@ a:hover {
 	padding: 6px 35px;
 	font-weight:bold;
 }
-.btn-default:hover {
-    background-color: #FBA301;
-    border-color: #FBA301;
-	color:#fff;
+.btn {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 .bg-grey{
 	background-color: #E9E9E9;
@@ -189,17 +196,19 @@ p {
     display: block;
     padding: 10px 22px;
 }
-.navbar-main .navbar-nav > li > a {
-	padding-top:35px;
-	min-height: 100px;
-	font-size:12px;
-	line-height:22px;
-	color:#333;
-	background-color:#fff;
-	font-weight:700;
-	text-transform:uppercase;
-	-webkit-transition: 0.2s all linear;
-		transition: 0.2s all linear;
+.navbar-main {
+  background: #0d6efd;
+  padding: 10px 0;
+}
+
+.navbar-main .nav > li > a {
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-main .nav > li > a:hover {
+  color: #ffd700;
 }
 .navbar-main.stiky .navbar-nav > li > a {
     padding-top: 20px;
@@ -290,11 +299,16 @@ p {
     font-weight: 900;
 }
 .banner .caption {
-	color:#fff;
-	position:absolute;
-	top:100px;
-	left:20px;
-	max-width:560px;
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+}
+
+.banner h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
 }
 .banner .caption a.btn-default,
 .wrap-caption a.btn-default{
@@ -543,8 +557,18 @@ p {
 .services{
 	
 }
-.services-item{
-	margin-bottom:70px;
+.services-item {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.services-item:hover {
+  transform: translateY(-5px);
+
 }
 .services-item.left .icon{
 	width:80px;
@@ -1805,10 +1829,19 @@ p.help-block.text-danger li {
 	}
 }
 
-@media (min-width: 768px) {
-	.navbar-main.stiky .navbar-brand > img {
-		width: 80%;
-	}	
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background: #0d6efd;
+  }
+
+  .banner h2 {
+    font-size: 24px;
+  }
+
+  .services-item {
+    text-align: center;
+  }
+
 }
 
 #myBtn {
